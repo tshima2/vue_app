@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="sample.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+
+
+    <div id="app-1">      
+      <label>名前</label>
+      <input type="text" id="client_name" />
+      <label>コース</label>
+      <input type="text" id="client_course" />
+      <label>受講期</label>
+      <input type="text" id="client_term" />
+    </div>
+
+    <div id="app-2">
+      <button v-on:click="insertClient">入力した生徒を追加する</button>
+      <ol>
+        <li v-for="client in clients">
+          {{ client.text }}
+        </li>
+      </ol>
+    </div>
+    
+    <script src="vue_app.js"></script>
+  </body>
+
+</html>
